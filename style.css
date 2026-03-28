@@ -1,0 +1,779 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: white;
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(270deg,
+            #0f0c29,
+            /* dark purple */
+            #1a1a2e,
+            /* dark blue */
+            #16213e,
+            /* navy */
+            #0f3460
+            /* deep blue */
+        );
+    background-size: 800% 800%;
+    animation: darkRGB 12s ease infinite;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    clip-path: ellipse(100% 100% at 50% 0%);
+}
+
+@keyframes darkRGB {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.overlay {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.2), transparent);
+    animation: move 6s infinite linear;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(-25%, -25%);
+    }
+
+    50% {
+        transform: translate(0%, 0%);
+    }
+
+    100% {
+        transform: translate(-25%, -25%);
+    }
+}
+
+.content {
+    text-align: center;
+    color: white;
+    z-index: 2;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 20px #00f7ff;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #00f7ff, #00c6ff);
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00f7ff;
+}
+
+
+
+.section {
+    height: 120vh;
+    padding: 50px;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.section:hover {
+    background: #1e293b;
+    transform: scale(1.05);
+}
+
+/* INTRO SECTION */
+.intro {
+    padding: 100px 10%;
+    background: linear-gradient(135deg, #020617, #0f172a);
+}
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* TEXT */
+.intro-text {
+    flex: 1;
+}
+
+.intro-text h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #38bdf8;
+}
+
+.intro-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cbd5f5;
+}
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+
+.cpu-card {
+    width: 400px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: fixed;
+    right: 350px;
+    top: 50px;
+
+}
+
+
+
+/* Image */
+.cpu-img {
+    width: 40vw;
+    height: 100vh;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+    position: relative;
+    left: 300px;
+    bottom: 600px;
+}
+
+.cpu-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+/* Text animation */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+.Computer-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    left: 27px;
+    bottom: 30px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+}
+
+.Computer-img:hover {
+    transform: scale(1.1);
+    box-shadow:
+        0 0 25px rgb(255, 0, 128),
+        0 0 50px rgb(83, 128, 0),
+        0 0 75px blue;
+}
+
+.ram-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    right: 270px;
+    bottom: 570px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+
+}
+
+.ram-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+
+.ram-card {
+    width: 400px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    left: 350px;
+    top: 50px
+}
+
+
+
+ul {
+    text-align: left;
+
+}
+
+
+.SSD-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    left: 350px;
+    bottom: 580px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+
+}
+
+.SSD-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+
+.SSD-card {
+    width: 450px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    right: 300px;
+    top: 40px;
+}
+
+.GPU-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    right: 300px;
+    bottom: 540px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+}
+
+.GPU-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+.GPU-card {
+    width: 450px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    left: 350px;
+    top: 70px;
+}
+
+.section.GPU {
+    height: 130vh;
+    padding: 50px;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(50px);
+
+}
+
+.section.GPU.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section.GPU:hover {
+    background: #1e293b;
+    transform: scale(1.05);
+}
+
+.Network-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    left: 300px;
+    bottom: 550px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+}
+
+.Network-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+.Network-card {
+    width: 450px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    right: 350px;
+
+    top: 50px;
+}
+
+.Motherboard-img {
+    width: 40vw;
+    height: 100vh;
+    position: relative;
+    right: 300px;
+    bottom: 520px;
+    margin-top: 20px;
+    border-radius: 15px;
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+}
+
+.Motherboard-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+.Motherboard-card {
+    width: 450px;
+    height: auto;
+    margin: 50px auto;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s ease forwards;
+    position: relative;
+    left: 350px;
+    top: 50px;
+}
+
+
+.section.Motherboard {
+    height: 120vh;
+    padding: 50px;
+    transition: all 1s ease;
+    opacity: 0;
+    transform: translateY(50px);
+
+}
+
+.section.Motherboard.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.section.Motherboard:hover {
+    background: #1e293b;
+    transform: scale(1.05);
+}
+
+
+/* Common Card Design (apply to all cards) */
+.cpu-card,
+.ram-card,
+.SSD-card,
+.GPU-card,
+.Network-card,
+.Motherboard-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
+    color: #e2e8f0;
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+/* 🔥 Hover Animation */
+.cpu-card:hover,
+.ram-card:hover,
+.SSD-card:hover,
+.GPU-card:hover,
+.Network-card:hover,
+.Motherboard-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 0 30px rgba(205, 85, 221, 0.6);
+}
+
+
+.cpu-card::before,
+.ram-card::before,
+.SSD-card::before,
+.GPU-card::before,
+.Network-card::before,
+.Motherboard-card::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(204, 103, 235, 0.3), transparent);
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.cpu-card:hover::before,
+.ram-card:hover::before,
+.SSD-card:hover::before,
+.GPU-card:hover::before,
+.Network-card:hover::before,
+.Motherboard-card:hover::before {
+    opacity: 1;
+}
+
+/* ✨ Fade In on Scroll */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.flow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.box {
+    padding: 15px 25px;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+
+.arrow {
+    font-size: 24px;
+    color: white;
+}
+
+.vertical {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.arrow-down {
+    font-size: 24px;
+    color: white;
+    margin: 10px 0;
+    position: relative;
+    right: 50px;
+}
+
+
+.box {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 5px #00f;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #0ff;
+    }
+
+    100% {
+        box-shadow: 0 0 5px #00f;
+    }
+}
+
+
+/* Headings */
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    color: #00e5ff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Body text */
+p,
+li {
+    font-family: 'Poppins', sans-serif;
+    color: #e0f7fa;
+}
+
+/* Card styling upgrade */
+.card {
+    font-family: 'Poppins', sans-serif;
+    backdrop-filter: blur(10px);
+}
+
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(2, 6, 23, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.navbar a {
+    color: #00f7ff;
+    text-decoration: none;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background: #020617;
+    color: #00f7ff;
+}
+
+
+.storagebtn {
+    background: linear-gradient(45deg, #801a92, #6fa4e0, #bfa6c4);
+
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    position: relative;
+    z-index: 9999;
+}
+
+.storagebtn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #008cff;
+}
+
+@media (max-width: 768px) {
+
+    /* Fix sections */
+    .section {
+        height: auto;
+        padding: 30px 15px;
+    }
+
+    /* All cards full width */
+    .cpu-card,
+    .ram-card,
+    .SSD-card,
+    .GPU-card,
+    .Network-card,
+    .Motherboard-card {
+        width: 90%;
+        position: static;
+        margin: 20px auto;
+    }
+
+    /* All images responsive */
+    .cpu-img,
+    .ram-img,
+    .SSD-img,
+    .GPU-img,
+    .Network-img,
+    .Motherboard-img,
+    .Computer-img {
+        width: 90%;
+        height: auto;
+        position: static;
+        margin: 20px auto;
+    }
+
+    /* Fix navbar */
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

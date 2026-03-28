@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU - Smart Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>The Power of Storage ⚡</h1>
+        <p>Learn • Explore • Test Yourself</p>
+    </header>
+
+    <section class="hero">
+        <img src="/Images/Storage-Image.png" alt="CPU" class="Storage-Image">
+        
+        <div class="Storage-card">
+            <h2>📖 What is Storage?</h2>
+            <p>
+                Storage is the component of a computer that is used to save data, files, applications, and the operating
+                system permanently. Unlike RAM, storage retains information even when the computer is turned off. It
+                allows users to store documents, photos, videos, and software for future use. There are different types
+                of storage devices, such as Hard Disk Drives (HDD), Solid State Drives (SSD), USB drives, and cloud
+                storage. Storage plays a crucial role in determining how much data a system can hold and how quickly it
+                can access and retrieve that data when needed.
+            </p>
+
+        </div>
+
+
+    </section>
+
+    <section class="card">
+        <h2>⚙️ Working of Storage</h2>
+        <div class="grid">
+
+            <p> Storage works by saving and retrieving data in digital form using binary values (0s and 1s). 
+            When a user saves a file, the operating system sends data to the storage device, where it is 
+            written and stored permanently. In HDDs, data is stored on spinning magnetic disks, while SSDs 
+            use flash memory chips for faster access. When data is needed, the system reads it from storage 
+            and transfers it to RAM for quick processing by the CPU. This continuous process ensures smooth 
+            data access, efficient performance, and reliable long-term storage of information.</p>
+
+            
+        </div>
+    </section>
+
+    <section class="card">
+        <h1>🧠 Types of Storage</h1>
+        <section>
+            <div class="grid">
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>HDD</h3>
+                    <p class="details">
+                        Hard Disk Drive uses spinning disks to store data. It is affordable
+                        and offers large storage capacity but is slower compared to modern storage.
+
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>SSD</h3>
+                    <p class="details">
+                        Solid State Drive is much faster and reliable as it has no moving parts.
+                        It improves system speed, boot time, and overall performance.
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>USB Drive</h3>
+                    <p class="details">
+                        A portable storage device used to transfer and store files easily.
+                        It is compact, lightweight, and convenient for backups.
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>Cloud Storage</h3>
+                    <p class="details">
+                        Stores data online and allows access from anywhere using the internet.
+                        Examples include Google Drive and Dropbox.
+                    </p>
+                </div>
+
+        </section>
+
+
+    </section>
+
+
+    <section class="card">
+        <h2 style="text-align:center; margin-bottom:30px;">⚔️ SSD vs HDD</h2>
+
+
+
+        <div class="compare-container">
+
+            <!-- SSD -->
+            <div class="compare-card-1">
+                <h3>⚡ SSD</h3>
+                <p><b>Type:</b> Solid State Drive</p>
+                <p><b>Speed:</b> Very Fast 🚀</p>
+                <p><b>Technology:</b> Flash memory (no moving parts)</p>
+                <p><b>Performance:</b> Faster boot & loading</p>
+                <p><b>Noise:</b> Silent 🔇</p>
+                <p><b>Durability:</b> More durable ✅</p>
+                <p><b>Cost:</b> Expensive 💰</p>
+            </div>
+
+            <!-- HDD -->
+            <div class="compare-card-2">
+                <h3>💽 HDD</h3>
+                <p><b>Type:</b> Hard Disk Drive</p>
+                <p><b>Speed:</b> Slower 🐢</p>
+                <p><b>Technology:</b> Spinning disks</p>
+                <p><b>Performance:</b> Slower boot time</p>
+                <p><b>Noise:</b> Makes sound 🔊</p>
+                <p><b>Durability:</b> Less durable ❌</p>
+                <p><b>Cost:</b> Cheaper 💵</p>
+            </div>
+
+        </div>
+    </section>
+
+    </section>
+
+
+    <section class="card">
+        <h2> 🧠 Conclusion</h2>
+        <p>Storage plays a vital role in every computer system by securely holding data, files,
+            and applications for long-term use. From traditional HDDs to modern SSDs and cloud
+            solutions, each type of storage offers unique advantages based on speed, capacity,
+            and accessibility. Choosing the right storage improves system performance, reliability,
+            and user experience. Understanding storage helps users make smarter decisions while
+            upgrading or managing their devices, ensuring faster access, better organization,
+            and efficient data handling in everyday computing tasks.</p>
+    </section>
+
+    <section class="card quiz">
+        <h2>🧩 Storage Quiz (Level Up!)</h2>
+
+        <div id="quizBox">
+            <p id="question"></p>
+            <div id="options"></div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <h3 id="score"></h3>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Learning Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

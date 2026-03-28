@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPU - Smart Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1> The Brain Behind Graphics: Understanding GPU </h1>
+        <p>Learn • Explore • Test Yourself</p>
+    </header>
+
+    <section class="hero">
+        <img src="/Images/GPU-Image.png" alt="CPU" class="GPU-Image">
+
+        <div class="GPU-card">
+            <h2>📖 What is GPU?</h2>
+            <p>
+                A GPU (Graphics Processing Unit) is a specialized electronic circuit designed to process and render
+                images, videos, and animations quickly. Unlike a CPU, which handles general tasks, a GPU performs many
+                calculations simultaneously, making it ideal for parallel processing. It is widely used in gaming, video
+                editing, 3D rendering, and modern technologies like artificial intelligence and machine learning. GPUs
+                improve visual performance by handling complex graphics operations efficiently. They can be integrated
+                into the motherboard or exist as dedicated cards. Today, GPUs are essential not only for graphics but
+                also for scientific computing, data analysis, and high-performance applications across various
+                industries.
+            </p>
+
+        </div>
+
+
+    </section>
+
+    <section class="card">
+        <h2>⚙️ Working of GPU</h2>
+        <div class="grid">
+
+            <p> A GPU (Graphics Processing Unit) works by processing large amounts of data simultaneously using parallel
+                processing. First, the CPU sends instructions and data (such as images or video frames) to the GPU. The
+                GPU contains thousands of small cores that divide the task into smaller parts and process them at the
+                same time. This allows it to handle complex calculations much faster than a CPU.
+
+                The GPU then performs operations like geometry processing, shading, and texturing to create detailed
+                images. It uses its dedicated memory called VRAM to store data for quick access. After processing, the
+                GPU assembles the final image (frame) and sends it to the display.
+
+                This entire process happens many times per second, enabling smooth graphics in games, videos, and
+                applications. GPUs are also widely used in artificial intelligence and scientific computing due to their
+                high-speed parallel capabilities..</p>
+
+
+        </div>
+    </section>
+
+    <section class="card">
+        <h1>🎮 Types of GPU</h1>
+        <section>
+            <div class="grid">
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>Integrated GPU</h3>
+                    <p class="details">
+                        Built into the CPU, it shares system memory. It is power-efficient
+                        and suitable for basic tasks like browsing, videos, and light gaming
+
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>Dedicated GPU</h3>
+                    <p class="details">
+                        A separate graphics card with its own memory (VRAM). It delivers high
+                        performance and is used for gaming, video editing, and AI tasks.
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>Hybrid GPU</h3>
+                    <p class="details">
+                        Combines integrated and dedicated GPUs. It switches between them
+                        to balance performance and power efficiency.
+                    </p>
+                </div>
+
+                <div class="box" onclick="toggleBox(this)">
+                    <h3>External GPU (eGPU)</h3>
+                    <p class="details">
+                        An external graphics card connected via ports like Thunderbolt.
+                        It boosts graphics performance of laptops and compact systems.
+                    </p>
+                </div>
+
+        </section>
+
+
+    </section>
+
+
+    <section class="card">
+        <h2 style="text-align:center; margin-bottom:30px;">⚔️ Dedicated GPU vs Integrated GPU</h2>
+
+
+
+        <div class="compare-container">
+
+            <!-- Dedicated GPU -->
+            <div class="compare-card-1">
+                <h3>⚡ Dedicated GPU</h3>
+                <p><b>Type:</b> Separate Graphics Card</p>
+                <p><b>Speed:</b> Very Fast 🚀</p>
+                <p><b>Memory:</b> Has its own VRAM</p>
+                <p><b>Performance:</b> High-end gaming & editing</p>
+                <p><b>Power Usage:</b> High 🔋</p>
+                <p><b>Cost:</b> Expensive 💰</p>
+                <p><b>Usage:</b> Gaming, AI, Video Editing</p>
+            </div>
+
+            <!-- Integrated GPU -->
+            <div class="compare-card-2">
+                <h3>🧠 Integrated GPU</h3>
+                <p><b>Type:</b> Built into CPU</p>
+                <p><b>Speed:</b> Moderate ⚖️</p>
+                <p><b>Memory:</b> Uses system RAM</p>
+                <p><b>Performance:</b> Basic tasks & light gaming</p>
+                <p><b>Power Usage:</b> Low 🔋</p>
+                <p><b>Cost:</b> Affordable 💵</p>
+                <p><b>Usage:</b> Browsing, Videos, Office Work</p>
+            </div>
+
+
+        </div>
+    </section>
+
+    </section>
+
+
+    <section class="card">
+        <h2>⚙️ GPU Components</h2>
+        <div class="grid">
+
+            <div class="box">
+                <h3>CUDA Cores</h3>
+                <p>
+                    The main processing units of a GPU that handle calculations for graphics,
+                    gaming, and parallel computing tasks.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>VRAM</h3>
+                <p>
+                    Video memory used to store textures, images, and graphics data for
+                    faster processing and smooth rendering.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>GPU Core</h3>
+                <p>
+                    The central unit of the GPU responsible for executing instructions
+                    and managing all graphical operations.
+                </p>
+            </div>
+
+            <div class="box">
+                <h3>Cooling System</h3>
+                <p>
+                    Includes fans or heat sinks to prevent overheating and maintain
+                    performance during heavy workloads.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="card">
+        <h2> 🧠 Conclusion</h2>
+        <p> In conclusion, the GPU plays a crucial role in enhancing a computer’s graphical
+            performance and overall speed. From gaming and video editing to AI and machine
+            learning, GPUs handle complex calculations efficiently through parallel processing.
+            Integrated GPUs are suitable for everyday tasks, while dedicated GPUs deliver high
+            performance for demanding applications. Understanding GPU types and components helps
+            users choose the right system based on their needs. As technology advances, GPUs
+            continue to evolve, making computing faster, smarter, and more visually powerful.</p>
+    </section>
+
+    <section class="card quiz">
+        <h2>🧩 GPU Quiz (Level Up!)</h2>
+
+        <div id="quizBox">
+            <p id="question"></p>
+            <div id="options"></div>
+            <button onclick="nextQuestion()">Next</button>
+        </div>
+
+        <h3 id="score"></h3>
+    </section>
+
+    <footer>
+        <p>© 2026 Smart Learning Hub | All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

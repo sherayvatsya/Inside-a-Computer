@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 40px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.RAM-Image {
+    width: 40vw;
+    height: 80vh;
+    position: relative;
+    left: 700px;
+    bottom: 20 px;
+    margin-top: 20px;
+    border-radius: 15px;
+
+    animation: float 3s ease-in-out infinite;
+    transition: 0.4s;
+
+}
+
+.RAM-Image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00f2ff;
+}
+
+
+/* Glow Animation */
+.RAM-Image::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #00f0ff, #007bff, #00f0ff);
+    z-index: -1;
+    filter: blur(20px);
+    opacity: 0.7;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Cards */
+.card {
+    margin: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+    text-align: center;
+
+}
+
+.RAM-card {
+    margin: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s;
+    position: relative;
+    width: 40vw;
+    height: 40vh;
+    top: 100px;
+    right: 600px;
+}
+
+
+.RAM-card:hover {
+    transform: scale(1.03);
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Grid */
+.ran-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.grid-difference {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+    width: 80vw;
+    height: 80;
+}
+
+
+.RAM-box {
+    flex: 1;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    left: 100px;
+}
+
+
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #00c6ff;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0072ff;
+    color: white;
+}
+
+/* Quiz */
+.quiz {
+    text-align: center;
+}
+
+#options button {
+    display: block;
+    margin: 10px auto;
+    width: 200px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    color: #00e5ff;
+    text-align: center;
+}
+
+
+.box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+}
+
+.ram-grid.box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Glow effect (before pseudo element) */
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00f5ff, #00bfff);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* Hover animation */
+.box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+/* Glow appear on hover */
+.box:hover::before {
+    opacity: 0.15;
+}
+
+.RAM-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    left: 100px;
+}
+
+/* Glow effect (before pseudo element) */
+.RAM-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00f5ff, #00bfff);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* Hover animation */
+.RAM-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+/* Glow appear on hover */
+.RAM-box:hover::before {
+    opacity: 0.15;
+}
+
+.Storage-box {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 15px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+
+    left: 150px;
+}
+
+
+/* Glow effect (before pseudo element) */
+.Storage-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #00f5ff, #00bfff);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+/* Hover animation */
+.Storage-box:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(0, 245, 255, 0.6);
+}
+
+/* Glow appear on hover */
+.Storage-box:hover::before {
+    opacity: 0.15;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 2;
+    position: relative;
+}
+
+
+@media (max-width: 768px) {
+
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .RAM-Image,
+    .RAM-card {
+        width: 90%;
+        height: auto;
+        position: static;
+    }
+
+    .grid,
+    .grid-difference {
+        flex-direction: column;
+    }
+
+    .RAM-box,
+    .Storage-box {
+        position: static;
+        width: 90%;
+        margin: 10px auto;
+    }
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+    .ram-grid {
+        flex-direction: column;
+    }
+
+    .ram-grid .box {
+        width: 90%;
+    }
+}
