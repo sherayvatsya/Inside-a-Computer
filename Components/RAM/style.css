@@ -334,7 +334,6 @@ h2 {
 }
 
 
-/* 📱 Mobile */
 @media (max-width: 768px) {
     .ram-grid {
         flex-direction: column;
